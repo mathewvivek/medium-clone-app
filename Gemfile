@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'devise', '~> 3.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -24,6 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #gem 'pry'
 gem 'rspec-rails', '~> 3.4.0'
+gem 'factory_girl'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -34,12 +36,18 @@ gem 'rspec-rails', '~> 3.4.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :test do
+	gem 'capybara'
+end
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
 
 group :development do
+  gem 'unicorn'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

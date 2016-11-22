@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+<header>
+	<%= link_to "Write a Story", new_post_path %>
+</header>
 <%= yield %>
 
 </body>
