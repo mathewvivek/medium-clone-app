@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "User create posts" do
-	#@post = FactoryGirl.create(:post)
 	scenario "Successful" do
 		visit root_path
 		click_on "Write a Story"
@@ -12,5 +11,5 @@ RSpec.describe "User create posts" do
 		expect(page).to have_content "My First Story"
 	end
 
-	scenario "Unsuccesful"
+	scenario "Unsuccessful"
 end

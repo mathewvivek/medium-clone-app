@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "User Login" do
 
 	before(:each) do
-		@user = FactoryGirl.build(:user)
+		@user = FactoryGirl.create(:user)
 	end
 
 	feature "Successful" do
